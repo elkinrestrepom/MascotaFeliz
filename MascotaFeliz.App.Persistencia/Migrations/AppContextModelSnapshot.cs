@@ -75,19 +75,21 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("Afiliado")
+                    b.Property<int?>("ClienteID")
                         .HasColumnType("int");
 
-                    b.Property<string>("DireccionMascota")
+                    b.Property<string>("NombreMascota")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NombreMascota")
+                    b.Property<string>("Raza")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TipoMascota")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("ClienteID");
 
                     b.ToTable("Mascotas");
                 });
@@ -126,13 +128,11 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                 {
                     b.HasBaseType("MascotaFeliz.App.Dominio.Persona");
 
-                    b.Property<string>("DireccionCliente")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("MascotaID")
+                    b.Property<int>("Afiliado")
                         .HasColumnType("int");
 
-                    b.HasIndex("MascotaID");
+                    b.Property<string>("DireccionCliente")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Cliente");
                 });
@@ -144,14 +144,8 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Property<int>("IdVeterinario")
                         .HasColumnType("int");
 
-                    b.Property<int?>("MascotaID")
-                        .HasColumnType("int")
-                        .HasColumnName("Veterinario_MascotaID");
-
                     b.Property<string>("TarjetaProfesional")
                         .HasColumnType("nvarchar(max)");
-
-                    b.HasIndex("MascotaID");
 
                     b.HasDiscriminator().HasValue("Veterinario");
                 });
@@ -171,22 +165,13 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Navigation("Veterinario");
                 });
 
-            modelBuilder.Entity("MascotaFeliz.App.Dominio.Cliente", b =>
+            modelBuilder.Entity("MascotaFeliz.App.Dominio.Mascota", b =>
                 {
-                    b.HasOne("MascotaFeliz.App.Dominio.Mascota", "Mascota")
+                    b.HasOne("MascotaFeliz.App.Dominio.Cliente", "Cliente")
                         .WithMany()
-                        .HasForeignKey("MascotaID");
+                        .HasForeignKey("ClienteID");
 
-                    b.Navigation("Mascota");
-                });
-
-            modelBuilder.Entity("MascotaFeliz.App.Dominio.Veterinario", b =>
-                {
-                    b.HasOne("MascotaFeliz.App.Dominio.Mascota", "Mascota")
-                        .WithMany()
-                        .HasForeignKey("MascotaID");
-
-                    b.Navigation("Mascota");
+                    b.Navigation("Cliente");
                 });
 #pragma warning restore 612, 618
         }

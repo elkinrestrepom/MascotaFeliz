@@ -6,8 +6,8 @@ namespace MascotaFeliz.App.Dominio
     {
         public int ID {get;set;}
         public string NombreMascota { get; set; }
-        public Afiliado Afiliado { get; set; }
+        public string Raza {get; set;}   
         public TipoMascota TipoMascota { get; set; }
-        public string DireccionMascota { get; set; }        
+        public Cliente Cliente { get; set; }     
     }
 }

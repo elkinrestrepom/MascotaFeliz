@@ -6,6 +6,5 @@ namespace MascotaFeliz.App.Dominio
     {
         public int IdVeterinario {get;set;}
         public string TarjetaProfesional { get; set; }
-        public Mascota Mascota { get; set; }  
     }
 }
