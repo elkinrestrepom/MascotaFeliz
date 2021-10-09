@@ -1,0 +1,572 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 720px){
+
+/* ...........Adaptabilidad de pantallas................*/
+
+.display-great{
+	display: inherit !important;
+}
+
+#display-great{
+	display: none;
+}
+
+#display-medium{
+	display: none;
+}
+
+
+/* HTML5 display-role reset for older browsers */ 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+a, abbr, acronym, address, big, cite, code, 
+del, dfn, em, img, ins, kbd, q, s, samp, 
+small, strike, strong, sub, sup, tt, var, 
+b, u, i, center, 
+dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, 
+time, mark, audio, video { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	font-size: 100%; 
+	font: inherit; 
+	vertical-align: baseline; 
+} 
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { 
+	display: block; 
+} 
+body { 
+	line-height: 1; 
+} 
+ol, ul {
+	 list-style: none; 
+} 
+blockquote, q {
+	 quotes: none; 
+} 
+blockquote:before, blockquote:after, q:before, q:after {
+	 content: ''; content: none; 
+} 
+table { 
+	border-collapse: collapse; border-spacing: 0; 
+}
+
+
+/*...........Margenes, Bordes, estilos generales.............*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#cuerpo{
+	background-color: #ffffff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;  /*ancho maximo de las pagina*/
+	height: 100%;  /*altura maxima de la pagina*/
+	margin: 1%;	/*margenes al borde de la pantalla*/
+	padding: 2%; /*relleno entre la margen y la caja(Box) del Body*/
+	outline: 5px double #969696;
+	/*border: 2px solid rgb(245, 5, 5);   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#cabecera{
+	position: static;
+	max-width: 100%;
+	height: 5%;
+	max-height: 50%;
+	z-index:1;
+	background-color:rgb(43, 174, 172);   /*azul RGB 43-174-172*/
+	text-align: center;
+	font: bold;
+	font-size: 50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*border: #36ff04 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+.menu_navegacion{
+	position: static;
+	max-width: 100%;
+	height: 2.94%;
+	max-height: 100%;
+	z-index:1;
+	display: block;
+	text-align: center;
+	background-color:rgb(35, 139, 137);   /*azul RGB 43-174-172*/
+	-moz-box-shadow: #969696 50px 20px 50px;
+	-webkit-box-shadow: #969696 200px 0px 200px;
+	-ms-box-shadow: #969696 50px 20px 50px;
+	/*border: #d0ff01 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+.main{
+	position: static;
+	max-width: 100%;
+	height: 68.63%;
+	max-height: 100%;
+	z-index:1;
+	background-color: #ffffff; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*border: #92153f dotted;  /*Solo para delimitar el area, eliminar linea*/
+}
+
+#pie_pagina{
+	position: static;
+	max-width: 100%;
+	height: 13.73%;
+	max-height: 100%;
+	z-index:1;
+	outline: 5px double rgb(35, 139, 137);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-top-style: solid;
+	/*border: #d7fd03 solid;  /*Solo para delimitar el area, eliminar linea*/
+}
+
+
+/* .............................HEADER............................z2 */
+
+#logo_equipo{
+	position: relative;
+	max-width: 60%;
+	height: 30%;
+	max-height: 30%;
+	z-index: 2;
+	top: 5%;
+	left: 20%;
+	float: left;
+	-moz-border-radius: 20px 20px;
+	-webkit-border-radius: 200px 200px;
+	border-radius: 20px 20px;
+	/*border: #fd03f0 solid	   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#cabecera h1{
+	position: relative;
+	max-width: 50%;
+	max-height: 100%;
+	z-index: 2;
+	text-align: center;
+	left: 25%;
+	font: italic bold Arimo, sans-serif;
+	font-size: 5em;
+	color: white;
+	/*border: #fd03f0 solid	   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#huellas_fondo{
+	position: relative;
+	max-width: 60%;
+	max-height: 10%;
+	left: 22%;
+	/*border: #8ef033 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+
+/* .............................NAV............................z2 */
+	
+	#menu_navegacion a:hover{
+		color:#C0C0C0;
+		text-decoration:underline;
+		opacity: 0.5;
+		text-shadow: #C1C1C1 0.5px 0.5px 0px , #C5C5C5 1px 1px 0px, #000000 1.5px 1.5px 0px;
+	}
+	
+	#menu_navegacion a {
+		-moz-transition: all 500ms;
+		-webkit-transition: all 500ms;
+		transition: all 500ms;
+	}
+	
+	#inicio:hover {
+		-moz-transform: translateY(5px) skew(-3deg);
+		-webkit-transform: translateY(5px) skew(-3deg);
+	}
+	#acceso_veterinario:hover {
+		-moz-transform: translateY(5px) skew(-3deg);
+		-webkit-transform: translateY(5px) skew(-3deg);
+	}
+	#acceso_cliente:hover {
+		-moz-transform: translateY(5px) skew(-3deg);
+		-webkit-transform: translateY(5px) skew(-3deg);
+	}
+	#cuidado_mascota:hover {
+		-moz-transform: translateY(5px) skew(-3deg);
+		-webkit-transform: translateY(5px) skew(-3deg);
+	}
+	#acceso_interno:hover {
+		-moz-transform: translateY(5px) skew(-3deg);
+		-webkit-transform: translateY(5px) skew(-3deg);
+	}
+	#contacto:hover {
+		-moz-transform: translateY(5px) skew(-3deg);
+		-webkit-transform: translateY(5px) skew(-3deg);
+	}
+
+/* .............................MAIN............................z1 */
+		
+/* .............................HOME............................z2 */
+
+
+#home{
+	position: static;
+	max-width: 100%;
+	max-height: 100%;
+	/*border: #8302b6 dotted;  /*Solo para delimitar el area, eliminar linea*/
+}
+#menu_huellas{
+	position: relative;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+	top: -80%;
+	left: 62.5%;
+	/*border: #03fd03 dotted;  /*Solo para delimitar el area, eliminar linea*/
+}
+
+#image_home{
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	z-index: 2;
+	/*border: #b700ff dashed;  /*Solo para delimitar el area, eliminar linea*/
+}
+
+#image_hometransp{
+	position: absolute;
+	max-width: 96%;
+	height: 32.5%;
+	max-height: 100%;
+	z-index:3;
+	opacity: 60%;
+	top: 75%;
+	/*border: #9e6d03 dashed;  /*Solo para delimitar el area, eliminar linea*/
+}
+
+#home h2{
+	display: none;
+	/*border: #fd03f0 solid;  /*Solo para delimitar el area, eliminar linea*/
+}
+
+#menu_huellas{
+	position: static;
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	z-index: 3;	
+	/*border: #03069e solid;  /*Solo para delimitar el area, eliminar linea*/
+}
+
+#acceso_veterinarios h2{
+	position: relative;
+	text-align: left;
+	max-width: 100%;
+	max-height: 50%;
+	left: 25%;
+	top: 108%;
+	font: italic bold Arimo, sans-serif;
+	font-size: 1.5em;
+	color: rgb(43, 174, 172);
+	/*border: #7f81f0 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#acceso_clientes h2{
+	position: relative;
+	text-align: left;
+	max-width: 100%;
+	max-height: 50%;
+	left: 25%;
+	top: 114%;
+	font: italic bold Arimo, sans-serif;
+	font-size: 1.5em;
+	color: rgb(43, 174, 172);
+	/*border: #7f81f0 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#cuidados_mascotas h2{
+	position: relative;
+	text-align: left;
+	max-width: 100%;
+	max-height: 50%;
+	left: 25%;
+	top: 124%;
+	font: italic bold Arimo, sans-serif;
+	font-size: 1.5em;
+	color: rgb(43, 174, 172);
+	/*border: #7f81f0 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#acceso_internos h2{
+	position: relative;
+	text-align: left;
+	max-width: 100%;
+	max-height: 50%;
+	left: 25%;
+	top: 134%;
+	font: italic bold Arimo, sans-serif;
+	font-size: 1.5em;
+	color: rgb(43, 174, 172);
+	/*border: #7f81f0 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#huella1{
+	width: 15%;
+	height: 15%;
+	left: 5%;
+	top: 1%;
+	z-index: 3;
+	background: rgb(43, 174, 172) no-repeat 50% 50%;
+	-moz-border-radius: 20%;
+	-webkit-border-radius: 20%;
+	border-radius: 20%;
+	box-shadow:  0px 0px 0px 10px #ffffff; /* offset-x | offset-y | blur-radius | spread-radius | color */
+	/*border: #33e9f0 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#imagen_huella1{
+	position: relative;
+	z-index: 4;
+	width: 6%;
+	height: 6%;
+	left: 5.5%;
+	top: 1%;
+	/*border: #33e9f0 solid;*/   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#huella2{
+	
+	width: 5%;
+	height: 5%;
+	left: 5%;
+	top: 3%;
+	z-index: 3;
+	background: rgb(43, 174, 172) no-repeat 50% 50%;
+	-moz-border-radius: 20%;
+	-webkit-border-radius: 20%;
+	border-radius: 20%;
+	box-shadow:  0px 0px 0px 10px #ffffff;
+	/*border: #33e9f0 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#imagen_huella2{
+	position: relative;
+	z-index: 3;
+	width: 4%;
+	height: 4%;
+	left: 15.5%;
+	top: 15.5%;
+	/*border: #33e9f0 solid;*/   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#huella3{
+
+	width: 5%;
+	height: 5%;
+	left: 5%;
+	top: 4%;
+	z-index: 3;
+	background: rgb(43, 174, 172) no-repeat 50% 50%;
+	-moz-border-radius: 20%;
+	-webkit-border-radius: 20%;
+	border-radius: 20%;
+	box-shadow:  0px 0px 0px 10px #ffffff;
+	/*border: #33e9f0 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#imagen_huella3{
+	position: relative;
+	z-index: 3;
+	width: 4%;
+	height: 4%;
+	left: 15.5%;
+	top: 25.5%;
+	/*border: #33e9f0 solid;*/   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#huella4{
+
+	width: 5%;
+	height: 5%;
+	left: 5%;
+	top: 6%;
+	z-index: 3;
+	background: rgb(43, 174, 172) no-repeat 50% 50%;
+	-moz-border-radius: 20%;
+	-webkit-border-radius: 20%;
+	border-radius: 20%;
+	box-shadow:  0px 0px 0px 10px #ffffff;
+	/*border: #33e9f0 solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#imagen_huella4{
+	position: relative;
+	z-index: 3;
+	width: 4%;
+	height: 4%;
+	left: 15.5%;
+	top: 35.5%;
+	/*border: #33e9f0 solid;*/  /*Solo para delimitar el area, eliminar linea*/
+}
+
+
+/* .............................FOOTER............................z2 */
+#pie_pagina{
+	position: static;
+	z-index: 4;
+	max-width: 100%;
+	max-height: 20%;
+	/*border: #f7a91a solid;   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#pie_pagina p{
+	position: relative;
+	font: normal 0.8em Oswald, sans-serif;
+	line-height: 100%;
+	text-align: center;
+	z-index: 4;
+	top: 80%;
+	/*border: #f7a91a solid; /*Solo para delimitar el area, eliminar linea*/
+}
+
+#derechos{
+	position: relative;
+	max-height: 100%;
+	max-width: 50%;
+	text-align: right;
+	z-index: 4;
+	font: italic small sans-serif;
+	line-height: 100%;
+	top: 60%;
+	left: 58%;
+	font-size: 0.7em;
+	/*border: #f7a91a solid; /*Solo para delimitar el area, eliminar linea*/
+}
+
+
+/* .............................FORMULARIOS............................z2 */
+
+@import url(https://fonts.googleapis.com/css?family=Titan+One);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+
+
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+input {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+.Registro {
+	margin: 50px auto;
+	width: 242px;
+}
+
+.Registro span {
+	color: hsl(5, 50%, 57%);
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	position: absolute;
+	text-align: center;
+	width: 36px;
+}
+
+.Registro input {
+	border: none;
+	height: 48px;
+	outline: none;
+}
+
+.Registro input[type="text"] {
+	background-color: #fff;
+	border-top: 2px solid #2c90c6;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+	color: #363636;
+	padding-left: 36px;
+	width: 204px;
+}
+
+.Registro input[type="password"] {
+	background-color: #fff;
+	border-top: 2px solid #2c90c6;
+	border-right: 1px solid #000;
+	border-bottom: 2px solid #2c90c6;
+	border-left: 1px solid #000;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+	color: #363636;
+	margin-bottom: 20px;
+	padding-left: 36px;
+	width: 204px;
+}
+
+.Registro input[type="submit"] {
+	background-color: #2c90c6;
+	border: 1px solid #2c90c6;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 240px;
+}
+
+.Registro input[type="submit"]:hover {
+	background-color: #2c70c6;
+  box-shadow: 2px 2px 20px  #2c90c6, #fff 0 -1px 2px;
+}
+
+.texto {
+  color: #2c90c6; 
+  font-size: 40px; 
+  margin: 2% auto;
+  text-align: center;
+  font-family: 'Titan One';   
+  text-shadow: 1px 2px 1px  rgba(0,0,0,.5);
+  padding-top: 40px;
+}
+
+p:hover {
+  text-shadow: 2px 2px 20px  #2c90c6, #fff 0 -1px 2px;
+}
+
+}

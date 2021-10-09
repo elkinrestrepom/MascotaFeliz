@@ -5,6 +5,7 @@ namespace MascotaFeliz.App.Dominio
     public class Mascota
     {
         public int ID {get;set;}
+        public int IdMascota {get;set;}
         public string NombreMascota { get; set; }
         public string Raza {get; set;}   
         public TipoMascota TipoMascota { get; set; }

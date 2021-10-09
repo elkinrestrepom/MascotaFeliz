@@ -19,7 +19,6 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DireccionCliente = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Afiliado = table.Column<int>(type: "int", nullable: true),
-                    IdVeterinario = table.Column<int>(type: "int", nullable: true),
                     TarjetaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -33,6 +32,7 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    IdMascota = table.Column<int>(type: "int", nullable: false),
                     NombreMascota = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Raza = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TipoMascota = table.Column<int>(type: "int", nullable: false),

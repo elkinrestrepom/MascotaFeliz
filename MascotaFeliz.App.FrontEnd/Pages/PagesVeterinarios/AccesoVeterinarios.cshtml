@@ -1,0 +1,118 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.AccesoVeterinariosModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0, maximun-scale=1"> <!--etiqueta diseño adaptable-->
+        <meta name="keywords" content="Veterinaria, mascotas, domicilios, perros, gatos, veterinarios" />
+        <title>Veterinarios</title>
+        <script src="uitotop-jquery-plugin.js" type="text/javascript"></script>
+        <script src="jquery-3.1.0.min.js" type="text/javascript"> </script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Open+sans|Oswald|Prompt|Arimo:400,700,400italic,700italic" />
+        <link rel="stylesheet" href="~/css/mascotafeliz.css" type="text/css" media="screen and (min-width: 1025px) and (max-width: 1920px)" />
+	    <link rel="stylesheet" href="~/css/medium.css" type="text/css" media="screen and (min-width: 721px) and (max-width: 1024px)" />
+	    <link rel="stylesheet" href="~/css/mini.css" type="text/css" media="screen and (max-width: 720px)" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    </head>
+
+    <body>
+        <div id="cuerpo">
+        <header id="cabecera" role="banner">
+            <img id="logo_equipo" src="Imagenes/LogoEquipoCamaleones.png" alt="LogoEquipoCamaleones"/>
+            <h1>VETERINARIA&nbsp MASCOTA&nbsp FELIZ</h1>
+            <div id="huellas_fondo">
+                <img src="Imagenes/huellas_fondo.png" alt="image_huellas"/>
+            </div>
+        </header>
+        <nav class="menu_navegacion" role="navigation">
+            <ul id="display-great" role="navigation">
+                <li id="inicio" class="active"><a href="/Home">INICIO &nbsp</a></li>
+                <li id="acceso_veterinario" class="active"><a href="/PagesVeterinarios/AccesoVeterinarios">&nbsp&nbsp ACCESO VETERINARIOS &nbsp</a></li>
+                <li id="acceso_cliente" class="active"><a href="/PagesClientes/AccesoClientes">&nbsp&nbsp ACCESO CLIENTES &nbsp</a></li>
+                <li id="cuidado_mascota" class="active"><a href="/PagesCuidados/CuidadosMascota">&nbsp&nbsp CUIDADOS MASCOTAS &nbsp</a></li>
+                <li id="acceso_interno" class="active"><a href="/PagesAccesoInterno/AccesoInterno">&nbsp&nbsp ACCESO INTERNO &nbsp</a></li>
+                <li id="contacto" class="active"><a href="/PagesContacto/Contacto">&nbsp&nbsp CONTACTO &nbsp</a></li> 
+            </ul>
+
+            <ul id="display-medium" role="navigation">
+                <li id="inicio" class="active"><a href="/Home">INICIO &nbsp</a></li>
+                <li id="acceso_veterinario" class="active"><a href="/PagesVeterinarios/AccesoVeterinarios">&nbsp ACCESO VETERINARIOS &nbsp</a></li>
+                <li id="acceso_cliente" class="active"><a href="/PagesClientes/AccesoClientes">&nbsp ACCESO CLIENTES &nbsp</a></li>
+                <li id="cuidado_mascota" class="active"><a href="/PagesCuidados/CuidadosMascota">&nbsp CUIDADOS MASCOTAS &nbsp</a></li>
+                <li id="acceso_interno" class="active"><a href="/PagesAccesoInterno/AccesoInterno">&nbsp ACCESO INTERNO &nbsp</a></li>
+                <li id="contacto" class="active"><a href="/PagesContacto/Contacto">&nbsp CONTACTO &nbsp</a></li> 
+            </ul>
+    
+            <select id="display-mini">
+                <option>INICIO</option>
+                <option>ACESSO VETERINARIOS</option>
+                <option>ACESSO CLIENTES</option>
+                <option>CUIDADOS MASCOTA</option>
+                <option>ACESSO INTERNO</option>
+                <option>CONTACTO</option>
+            </select>
+        </nav>
+        
+        <main class="main">        
+            <div id="home">
+                <img id="image_home" src="Imagenes/Home1.png" alt="image_home"/>
+                <h2>VETERINARIA MASCOTA FELIZ</h2>
+            </div>                
+            <div id="transparencia">
+                <img id="image_hometransp" src="Imagenes/HomeTransparencia.png" alt="image_Transparencia"/>
+            </div>
+            <aside id="menu_huellas" role="complementary">
+                <div id ="acceso_veterinarios">
+                    <h2>ACCESO VETERINARIOS</h2>
+                    <article id="huella1"></article>
+                    <img id="imagen_huella1" src="Imagenes/huella.png" alt="image_Huella"/>
+                    <br>
+                </div>
+                
+                <div id="acceso_clientes">
+                    <h2>ACCESO CLIENTES</h2>
+                    <article id="huella2"></article>
+                    <img id="imagen_huella2" src="Imagenes/huella.png" alt="image_Huella"/>
+                    <br>
+                </div>
+                
+                <div id="cuidados_mascotas">
+                    <h2>CUIDADOS PARA TU MASCOTA</h2>
+                    <article id="huella3"></article>
+                    <img id="imagen_huella3" src="Imagenes/huella.png" alt="image_Huella"/>
+                    <br>
+                </div>
+
+                <div id="acceso_internos">
+                    <h2>ACCESO INTERNO</h2>
+                    <article id="huella4"></article>
+                    <img id="imagen_huella4" src="Imagenes/huella.png" alt="image_Huella"/>
+                    <br>
+                </div>                
+            </aside>
+        </main>
+
+        <footer id="pie_pagina">
+            <header id="datos_contacto" >
+                <p></p><br>
+                <p>MinTIC Proyecto Final Ciclo3 Desarrollo de Software G15</p>
+                <p>Desarrolladores: Diana Patricia Gómez Rámirez, Mayra Alejandra Ospina Mosquera,</p>
+                <p>Elkin Restrepo Meneses, Dumar Adrian Rojas Vega y Luis Jorge Moncada Sosa</p>
+                <p></p>
+                <p></p>
+                <p>Contáctenos en: <a href="https://drive.google.com/drive/folders/15iqDxQGmCSR78ERm3Y7pcaUwqmuTz6DI?usp=sharing_eil_dm&ts=613387d5	
+                    ">Equipo Camaleones</a></p>
+                <p></p>
+            </header>
+            <footer id="derechos">
+                <p>Equipo Camaleones - 2021 &copy; Todos los derechos reservados</p>
+            </footer>
+        </footer>
+        </div>
+    </body>
+
+</html>

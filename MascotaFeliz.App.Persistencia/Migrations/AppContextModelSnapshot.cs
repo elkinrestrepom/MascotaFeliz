@@ -78,6 +78,9 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Property<int?>("ClienteID")
                         .HasColumnType("int");
 
+                    b.Property<int>("IdMascota")
+                        .HasColumnType("int");
+
                     b.Property<string>("NombreMascota")
                         .HasColumnType("nvarchar(max)");
 
@@ -140,9 +143,6 @@ namespace MascotaFeliz.App.Persistencia.Migrations
             modelBuilder.Entity("MascotaFeliz.App.Dominio.Veterinario", b =>
                 {
                     b.HasBaseType("MascotaFeliz.App.Dominio.Persona");
-
-                    b.Property<int>("IdVeterinario")
-                        .HasColumnType("int");
 
                     b.Property<string>("TarjetaProfesional")
                         .HasColumnType("nvarchar(max)");

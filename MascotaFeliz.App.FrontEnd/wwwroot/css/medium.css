@@ -1,0 +1,59 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+@media screen and (min-width: 721px) and (max-width: 1024px){
+
+.display-great{
+	display: inherit !important;
+}
+
+#display-mini{
+	display: none;
+}
+
+#cuerpo{
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*-----contenedor------*/
+
+header{
+	width: 100%;
+	height: 10%;
+	max-height: 100%;
+}
+
+#logo_equipo{
+	width: 20%;
+	height: 70%;
+}
+
+#cabecera h1{
+	width: 100%;
+	max-height: 100%;
+}
+
+nav {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+main{
+	max-height: 100%;     
+	max-width: 50%;
+}
+
+aside{
+	max-width: 100%;
+	max-height: 90%;
+}
+
+footer{
+	max-height: 100%;   
+	max-width: 100%;
+}
+
+}
