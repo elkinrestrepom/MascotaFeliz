@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("MascotaFeliz.App.FrontEnd")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("MascotaFeliz.App.Frontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("MascotaFeliz.App.FrontEnd")]
-[assembly: System.Reflection.AssemblyTitleAttribute("MascotaFeliz.App.FrontEnd")]
+[assembly: System.Reflection.AssemblyProductAttribute("MascotaFeliz.App.Frontend")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MascotaFeliz.App.Frontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

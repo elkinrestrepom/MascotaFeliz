@@ -121,7 +121,7 @@ table {
 }
 
 #pie_pagina{
-	position: static;
+	position: absolute;
 	max-width: 100%;
 	height: 13.73%;
 	max-height: 100%;
@@ -644,10 +644,100 @@ table {
 
 
 
+/* ......................ACCESOS PAGINAS...........................*/
 
+#cuadro4{
+	float: left;
+	width: 17%;
+	height: 5%;
+	margin-top: 1%;
+	margin-left: 10%;
+	margin-right: 10%;	
+	position: absolute;
+	z-index: 1;
+	/*border: 2px solid rgb(245, 5, 5);   /*Solo para delimitar el area, eliminar linea*/
+}
 
+article h3{
+	position: absolute;
+	text-align: center;
+}
 
+#Imagen_servicios1{
+	width: 100%;
+	height: 650%;
+	position: absolute;
+	z-index: 2;
+	margin-top: 5%;
+	box-shadow: 5px 10px 7px rgba(0,0,0,0.5);
+	/*border: 2px solid rgb(45, 245, 5);   /*Solo para delimitar el area, eliminar linea*/
+}
 
+#Imagen_servicios1:hover{
+	transform: scale(1.1, 1.1);
+	-moz-transition: -moz-transform 0.2s ease-in 0.2s;
+	-webkit-transition: -webkit-transform 0.2s ease-in 0.2s;
+	opacity: 0.9;
+}
+
+#cuadro5{
+	float: left;
+	width: 17%;
+	height:35%;
+	margin-top: 1%;
+	margin-left: 40%;
+	margin-right: 10%;
+	position: absolute;
+	z-index: 1;
+	/*border: 2px solid rgb(245, 5, 5);   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#Imagen_servicios2{
+	width: 100%;
+	height: 75%;
+	position: absolute;
+	z-index: 2;
+	margin-top: 5%;
+	box-shadow: 5px 10px 7px rgba(0,0,0,0.5);
+	/*border: 2px solid rgb(45, 245, 5);   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#Imagen_servicios2:hover{
+	transform: scale(1.1, 1.1);
+	-moz-transition: -moz-transform 0.2s ease-in 0.2s;
+	-webkit-transition: -webkit-transform 0.2s ease-in 0.2s;
+	opacity: 0.9;
+}
+
+#cuadro6{
+	float: left;
+	width: 17%;
+	height: 33%;
+	margin-top: 1%;
+	margin-left: 70%;
+	margin-right: 10%;
+	position:absolute;
+	z-index: 1;
+	/*border: 2px solid rgb(245, 5, 5);   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#Imagen_servicios3{
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	z-index: 2;
+	margin-top: 5%;
+	border-radius: 60%;
+	box-shadow:  5px 10px 7px rgba(0,0,0,0.5);
+	/*border: 2px solid rgb(45, 245, 5);   /*Solo para delimitar el area, eliminar linea*/
+}
+
+#Imagen_servicios3:hover{
+	transform: scale(1.1, 1.1);
+	-moz-transition: -moz-transform 0.2s ease-in 0.2s;
+	-webkit-transition: -webkit-transform 0.2s ease-in 0.2s;
+	opacity: 0.9;
+}
 
 
 
@@ -661,6 +751,84 @@ table {
 @import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
 
 
+
+.form-register{
+	width: 35%;
+	background: rgb(43, 174, 172);
+	padding: 20px;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 4px;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: white;
+	box-shadow: 7px 13px 37px #000;
+  }
+  
+  .form-register h3{
+	font-size: 22px;
+	margin: auto;
+	text-align: center;
+  
+  }
+  
+  
+  .controls{
+	width: 100%;
+	background: rgb(35, 139, 137);
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 1px solid rgb(58, 165, 163);
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 18px;
+	color: white;
+  }
+  
+  .form-register p{
+	width: 50%;
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+  }
+  
+  .form-register a{
+	color: white;
+	text-decoration: none;
+  }
+  
+  .form-register a:hover{
+	color: white;
+	text-decoration: underline;
+  }
+  
+  .form-register .botons{
+	width: 50%;
+	background: rgb(43, 174, 172);
+	border: none;
+	text-align: center;
+	left: 20px;
+	padding: 12px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px;
+  }
+  
+  .form-register .botons:hover{
+	background: rgb(35, 139, 137);
+  
+  }
+
+  .form-register p:hover{
+	background: rgb(35, 139, 137);
+  
+  }
+
+
+/* .............................ELIMINAR FORMULARIO............................z2 */
+
+
+/*
 
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
@@ -698,8 +866,8 @@ input {
 .Registro input[type="text"] {
 	background-color: #fff;
 	border-top: 2px solid #2c90c6;
-	border-right: 1px solid #000;
-	border-left: 1px solid #000;
+	border-right: 1px solid rgb(196, 28, 28);
+	border-left: 1px solid rgb(241, 33, 33);
 	border-radius: 5px 5px 0 0;
 	-moz-border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
@@ -761,5 +929,5 @@ input {
 p:hover {
   text-shadow: 2px 2px 20px  #2c90c6, #fff 0 -1px 2px;
 }
-
+*/
 }
