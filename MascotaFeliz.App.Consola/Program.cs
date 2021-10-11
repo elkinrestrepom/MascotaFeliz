@@ -29,7 +29,8 @@ namespace MascotaFeliz.App.Consola
         //Clientes
         private static void AddCliente()   //creación de datos de clientes en la base de datos
         {
-            var cliente = new Cliente{
+            var cliente = new Cliente()
+            {
                 IdPersona = 00001,
                 Nombre = "Elkin",
                 Apellido = "Restrepo",
@@ -37,7 +38,8 @@ namespace MascotaFeliz.App.Consola
                 DireccionCliente = "Cedritos, Bogotá",
                 Afiliado = 0
             };
-            var cliente2 = new Cliente{
+            var cliente2 = new Cliente()
+            {
                 IdPersona = 00002,
                 Nombre = "Mayra",
                 Apellido = "Ospina",
@@ -45,7 +47,8 @@ namespace MascotaFeliz.App.Consola
                 DireccionCliente = "Villa Colombia, Cali",
                 Afiliado = 0
             };
-            var cliente3 = new Cliente{
+            var cliente3 = new Cliente()
+            {
                 IdPersona = 00003,
                 Nombre = "Diana",
                 Apellido = "Gómez",
@@ -53,7 +56,8 @@ namespace MascotaFeliz.App.Consola
                 DireccionCliente = "NN, Bogotá",
                 Afiliado = 0
             };
-            var cliente4 = new Cliente{
+            var cliente4 = new Cliente()
+            {
                 IdPersona = 00004,
                 Nombre = "Dumar",
                 Apellido = "Rojas",
@@ -61,7 +65,8 @@ namespace MascotaFeliz.App.Consola
                 DireccionCliente = "NN, Bogotá",
                 Afiliado = 0
             };
-            var cliente5 = new Cliente{
+            var cliente5 = new Cliente()
+            {
                 IdPersona = 00005,
                 Nombre = "Jorge",
                 Apellido = "Moncada",
