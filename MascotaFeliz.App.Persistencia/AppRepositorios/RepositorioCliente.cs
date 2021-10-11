@@ -1,68 +1,70 @@
+using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using MascotaFeliz.App.Dominio;
 
-namespace MascotaFeliz.App.Persistencia
-{
-    public class RepositorioCliente:IRepositorioCliente   //Se crea clase para implementar la interface IRepositorioCliente
-    {
-        private readonly AppContext _appContext;   //Referenciar al contexto del Cliente
 
-        public RepositorioCliente(AppContext appContext)   //Constructor
+namespace MascotaFeliz.App.Persistencia.AppRepositorios
+{
+    public class RepositorioCliente:IRepositorioCliente
+    { 
+        private readonly Contexto _contexto;
+
+       /* public RepositorioCliente(Contexto _contexto)
         {
-            _appContext = appContext;   //Le decimos que la variable AppContext va a ser igual que lo que recibamos en appContext
-        }   
-        //
-        //Implementar los métodos que habiamos firmado en IRepositorioCliente
-        //
-        Cliente IRepositorioCliente.AddCliente(Cliente cliente)
+            _contexto = contexto;
+        }*/
+        List<Cliente> clientes;
+       
+        public RepositorioCliente(Contexto contexto)
         {
-            var clienteAdicionado = _appContext.Clientes.Add(cliente);   //declarar variable con "var" para adicionar paciente
-            _appContext.SaveChanges();   //Guarda los cambios
-            return clienteAdicionado.Entity;   //Retorna el cliente y lo adiciona en la Base de Datos
+            _contexto = contexto;
+            clientes = new List<Cliente>()
+            {
+                new Cliente{idPersona="00001",nombres="Elkin", apellidos="Restrepo",telefono="3006094015",direccion="Cedritos, Bogotá"},
+                new Cliente{idPersona="00002",nombres="Mayra", apellidos="Ospina",telefono="3008945210",direccion="Villa Colombia, Cali"},
+                new Cliente{idPersona="00003",nombres="Diana", apellidos="Gómez",telefono="3017841308",direccion="Chía, Bogotá"},
+                new Cliente{idPersona="00004",nombres="Dumar", apellidos="Rojas",telefono="3168684393",direccion="NN, Bogotá"},
+                new Cliente{idPersona="00005",nombres="Luis", apellidos="Moncada",telefono="3002596457",direccion="El Caney, Cali"}
+            };
+        }
+        
+
+        public IEnumerable<Cliente> GetAllClientes()
+        {
+            return clientes;
         }
 
 
-        IEnumerable<Cliente> IRepositorioCliente.GetAllCliente()
+        public Cliente AddCliente(Cliente cliente)
         {
-            return _appContext.Clientes;   //Retorna todos los Clientes que están en la base de datos
-        }   
+            Cliente clienteAgregado = _contexto.Add(cliente).Entity;
+            _contexto.SaveChanges();
+            return clienteAgregado;
+        }
 
 
         Cliente IRepositorioCliente.UpdateCliente(Cliente cliente)
         {
-           var clienteEncontrado = _appContext.Clientes.FirstOrDefault(c => c.ID == cliente.ID);   //ID es la llave primaria de la entidad Persona
-           if (clienteEncontrado != null)
+           Cliente clienteEditar = _contexto.Clientes.FirstOrDefault(c => c.Id == cliente.Id);   //Id es la llave primaria de la entidad Persona
+           if (clienteEditar != null)
            {
-               clienteEncontrado.IdPersona = cliente.IdPersona;  
-               clienteEncontrado.Nombre = cliente.Nombre;             
-               clienteEncontrado.Apellido = cliente.Apellido;
-               clienteEncontrado.NumeroTelefono = cliente.NumeroTelefono;
-               clienteEncontrado.DireccionCliente = cliente.DireccionCliente;
-               clienteEncontrado.Afiliado = cliente.Afiliado;
-
-               _appContext.SaveChanges();
+               clienteEditar.idPersona = cliente.idPersona;  
+               clienteEditar.nombres = cliente.nombres;             
+               clienteEditar.apellidos = cliente.apellidos;
+               clienteEditar.telefono = cliente.telefono;
+               clienteEditar.direccion = cliente.direccion;
+              
+               _contexto.SaveChanges();
            }
-           return clienteEncontrado;
+           return clienteEditar;
         }
 
 
-        void IRepositorioCliente.DeleteCliente(int IdPersona)
+        Cliente IRepositorioCliente.GetClientePorId(int IdPersona)
         {
-            var clienteEncontrado = _appContext.Clientes.FirstOrDefault(c => c.ID == IdPersona);  //ID es la llave primaria de la entidad Persona
-            if (clienteEncontrado == null)
-                return;
-            _appContext.Clientes.Remove(clienteEncontrado);
-            _appContext.SaveChanges();
-            {
-                
-            }
-        }
-
-
-        Cliente IRepositorioCliente.GetCliente(int IdPersona)
-        {
-           return _appContext.Clientes.FirstOrDefault(c => c.ID == IdPersona);   //Busca y retorna un cliente  //ID es la llave primaria de la entidad Persona
+           return clientes.FirstOrDefault(c => c.Id == IdPersona);   //Busca y retorna un cliente  //ID es la llave primaria de la entidad Persona
         }
     }
 }

@@ -1,0 +1,56 @@
+﻿@page
+@model MascotaFeliz.App.Presentacion.Pages._AccesoClientesModel
+@{
+    ViewData["Title"] = "Acceso Clientes";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0, maximun-scale=1">
+    <!--etiqueta diseño adaptable-->
+    <meta name="keywords" content="Veterinaria, mascotas, domicilios, perros, gatos, veterinarios" />
+    <title>MascotaFeliz</title>
+    <script src="uitotop-jquery-plugin.js" type="text/javascript"></script>
+    <script src="jquery-3.1.0.min.js" type="text/javascript"> </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Open+sans|Oswald|Prompt|Arimo:400,700,400italic,700italic" />
+    <link rel="stylesheet" href="~/css/mascotafeliz.css" type="text/css" media="screen and (min-width: 1025px) and (max-width: 1920px)" />
+    <link rel="stylesheet" href="~/css/medium.css" type="text/css" media="screen and (min-width: 721px) and (max-width: 1024px)" />
+    <link rel="stylesheet" href="~/css/mini.css" type="text/css" media="screen and (max-width: 720px)" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+
+<main class="main">
+    <article>
+    <div id="home">
+        <div id="cuadro4">
+			<h3>INGRESAR </h3>
+			<div id="Imagen_servicios1">
+                <a href="/Clientes/_AccesoClientes" target="_self"><img src="~/Imagenes/VeterinarioIngresar.png"></a> 
+            </div>
+		</div>
+	</article>
+		<div id="cuadro5">
+			<h3>REGISTRARSE </h3>
+				<div id="Imagen_servicios2">
+                    <a href="/Clientes/_RegistroClientes" target="_self"><img src="~/Imagenes/VeterinarioRegistrarse.png" width="267" height="200"></a> 
+                </div>
+		</div>
+		
+		<div id="cuadro6">
+			<h3>ACTUALIZAR DATOS </h3>
+				<div id="Imagen_servicios3">
+                    <a href="/Clientes/list" target="_self"><img src="~/Imagenes/VeterinarioActualizar.png" width="267" height="200"></a> 
+                </div>
+		</div>
+        
+    </div>
+   
+
+</main>
+
+</html>

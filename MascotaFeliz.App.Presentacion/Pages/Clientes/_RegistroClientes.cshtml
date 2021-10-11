@@ -1,0 +1,28 @@
+﻿@page
+@model MascotaFeliz.App.Presentacion.Pages._RegistroClientesModel
+@{
+    ViewData["Title"] = "Registro Clientes";
+}
+<body>
+    <div>
+        <form class="form-register" method="post">
+            <h3>REGISTRAR CLIENTE</h3><br>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" class="controls" name="nombre"  placeholder="Ingresa tu nombre" /><br><br>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" class="controls" name="apellido"  placeholder="Ingresa tu apellido" /><br><br>
+            <label for="direccion">Dirección:</label><br>
+            <input type="text" class="controls" name="DireccionCliente"  placeholder="Ingresa tu dirección" /><br><br>
+            <label for="telefono">Teléfono:</label><br>
+            <input type="text" class="controls" name="NumeroTelefono"  placeholder="Ingresa tu teléfono" /><br><br>
+            <button class="botons" type="submit">Registrar datos</button>
+            <p><a href="#">¿Ya estas registrado?</a></p>
+        </form>
+        <br><br>
+           <a asp-page="./_AccesoClientes" class="btn-default"> Volver</a>
+           
+    </div>
+</body>
+
+    
+

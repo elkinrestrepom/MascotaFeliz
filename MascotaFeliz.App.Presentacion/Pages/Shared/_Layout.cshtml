@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+    <script> src ="http://kit.fontauscom.com/a076d05399.js" crossorigin="anonymus"</script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/mascotafeliz.css" type="text/css" media="screen and (min-width: 1025px) and (max-width: 1920px)" />
+    <link rel="stylesheet" href="~/css/medium.css" type="text/css" media="screen and (min-width: 721px) and (max-width: 1024px)" />
+    <link rel="stylesheet" href="~/css/mini.css" type="text/css" media="screen and (max-width: 720px)" />
+    <!--<link rel="stylesheet" href="~/css/site.css" />-->
+</head>
+
+<body>
+
+    <div id="cuerpo">
+        <header id="cabecera" role="banner">
+            <img id="logo_equipo" src="~/Imagenes/LogoEquipoCamaleones.png" alt="LogoEquipoCamaleones" />
+            <h1>VETERINARIA&nbsp MASCOTA&nbsp FELIZ</h1>
+            <div id="huellas_fondo">
+                <img src="~/Imagenes/huellas_fondo.png" alt="image_huellas" />
+            </div>
+        </header>
+        <nav class="menu_navegacion" role="navigation">
+            <ul id="display-great" role="navigation">
+                <li id="inicio" class="active"><a href="/Index">INICIO &nbsp</a></li>
+                <li id="acceso_veterinario" class="active"><a href="/Veterinarios/_AccesoVeterinarios">&nbsp&nbspACCESO VETERINARIOS &nbsp</a></li>
+                <li id="acceso_cliente" class="active"><a href="/Clientes/_AccesoClientes">&nbsp&nbsp ACCESO CLIENTES &nbsp</a></li>
+                <li id="cuidado_mascota" class="active"><a href="/Cuidados/_CuidadosMascota">&nbsp&nbsp CUIDADOS MASCOTAS &nbsp</a></li>
+                <li id="acceso_interno" class="active"><a href="/AccesoInterno/_AccesoInterno">&nbsp&nbsp ACCESO INTERNO &nbsp</a></li>
+                <li id="contacto" class="active"><a href="/Contacto/_Contacto">&nbsp&nbsp CONTACTO &nbsp</a></li>
+            </ul>
+
+            <ul id="display-medium" role="navigation">
+                <li id="inicio" class="active"><a href="/Index">INICIO &nbsp</a></li>
+                <li id="acceso_veterinario" class="active"><a href="/Veterinarios/_AccesoVeterinarios">&nbspACCESO VETERINARIOS &nbsp</a></li>
+                <li id="acceso_cliente" class="active"><a href="/Clientes/_AccesoClientes">&nbsp ACCESO CLIENTES&nbsp</a></li>
+                <li id="cuidado_mascota" class="active"><a href="/Cuidados/_CuidadosMascota">&nbsp CUIDADOS MASCOTAS&nbsp</a></li>
+                <li id="acceso_interno" class="active"><a href="/AccesoInterno/_AccesoInterno">&nbsp ACCESO INTERNO&nbsp</a></li>
+                <li id="contacto" class="active"><a href="/Contacto/_Contacto">&nbsp CONTACTO &nbsp</a></li>
+            </ul>
+
+            <select id="display-mini">
+                <option>INICIO</option>
+                <option>ACESSO VETERINARIOS</option>
+                <option>ACESSO CLIENTES</option>
+                <option>CUIDADOS MASCOTA</option>
+                <option>ACESSO INTERNO</option>
+                <option>CONTACTO</option>
+            </select>
+        </nav>
+
+        <div>
+            <main>
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer id="pie_pagina">
+            <header id="datos_contacto">
+                <p></p><br>
+                <p>MinTIC Proyecto Final Ciclo3 Desarrollo de Software G15</p>
+                <p>Desarrolladores: Diana Patricia Gómez Rámirez, Mayra Alejandra Ospina Mosquera,</p>
+                <p>Elkin Restrepo Meneses, Dumar Adrian Rojas Vega y Luis Jorge Moncada Sosa</p>
+                <p></p>
+                <p></p>
+                <p>Contáctenos en: <a href="https://drive.google.com/drive/folders/15iqDxQGmCSR78ERm3Y7pcaUwqmuTz6DI?usp=sharing_eil_dm&ts=613387d5	
+                    ">Equipo Camaleones</a></p>
+                <p></p>
+            </header>
+            <footer id="derechos">
+                <p>Equipo Camaleones - 2021 &copy; Todos los derechos reservados</p>
+            </footer>
+        </footer>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @RenderSection("Scripts", required: false)
+</body>
+
+</html>

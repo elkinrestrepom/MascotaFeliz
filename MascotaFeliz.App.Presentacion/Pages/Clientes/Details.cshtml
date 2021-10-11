@@ -1,0 +1,24 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.DetailsModel
+@{
+    ViewData["Title"] = "Detalles Clientes";
+}
+<h1>DETALLE DEL CLIENTE</h1>
+<div>
+    Id: @Model.Cliente.idPersona
+</div>
+<div>
+    Nombre: @Model.Cliente.nombres
+</div>
+<div>
+    Apellido: @Model.Cliente.apellidos
+</div>
+<div>
+    Teléfono: @Model.Cliente.telefono
+</div>
+<div>
+    Dirección: @Model.Cliente.direccion
+</div>
+
+<br><br>
+           <a asp-page="./List" class="btn-default"> Volver</a>

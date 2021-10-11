@@ -1,0 +1,27 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.EditModel
+@{
+    ViewData["Title"] = "Edicion Clientes";
+}
+<body>
+    <div>
+        <form class="form-register" method="post">
+            <input type="hidden" asp-for="Cliente.Id"/>
+            <h3>REGISTRAR CLIENTE</h3><br>
+            <label asp-for="Cliente.nombres">Nombre:</label><br>
+            <input asp-for="Cliente.nombres"type="text" class="controls" name="nombre"  placeholder="Ingresa tu nombre" /><br><br>
+            <label asp-for="Cliente.apellidos">Apellido:</label><br>
+            <input asp-for="Cliente.apellidos" type="text" class="controls" name="apellido"  placeholder="Ingresa tu apellido" /><br><br>
+            <label asp-for="Cliente.direccion">Dirección:</label><br>
+            <input asp-for="Cliente.direccion" type="text" class="controls" name="DireccionCliente"  placeholder="Ingresa tu dirección" /><br><br>
+            <label asp-for="Cliente.telefono">Teléfono:</label><br>
+            <input asp-for="Cliente.telefono" type="text" class="controls" name="NumeroTelefono"  placeholder="Ingresa tu teléfono" /><br><br>
+
+            <button class="botons" type="submit">Registrar datos</button>
+            <p><a href="#">¿Ya estas registrado?</a></p>
+        </form>
+        <br><br>
+           <a asp-page="./List" class="btn-default"> Volver</a>
+           
+    </div>
+</body>

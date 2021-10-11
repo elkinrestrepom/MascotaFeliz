@@ -1,14 +1,15 @@
 using System;
 
 namespace MascotaFeliz.App.Dominio
+
 {
     public class Persona
     {
-        public int ID {get;set;}
-        public int IdPersona {get;set;}
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string NumeroTelefono { get; set; }
+        public int Id {get; set;}
+        public string idPersona {get; set;}
+        public string nombres {get; set;}
+        public string apellidos {get; set;}
+        public string telefono {get; set;}
+        
     }
 }
-
