@@ -9,7 +9,7 @@
   <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="Search" placeholder="Ingrese el cliente" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" asp-page="/Clientes/_BuscarCliente">Buscar</button>
   </form>
 </nav>
 
@@ -19,7 +19,8 @@
     
         <thead class="thead-dark">
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Cédula</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
                 <th scope="col">Teléfono</th>
@@ -31,12 +32,13 @@
             @foreach(var client in Model.Clientes)
             {
                 <tr>
+                    <th @client.Id></th>
                     <th @client.idPersona></th>
                     <td>@client.nombres</td>
                     <td>@client.apellidos</td>
                     <td>@client.telefono</td>
                     <td>@client.direccion</td>
-                    <td><a class="btn btn-primary table-btn" asp-page="/Clientes/Details">
+                    <td><a class="btn btn-primary table-btn" asp-page="/Clientes/Details" asp-route-idCliente="@client.idPersona">
                     <i class="fas fa-address-book fa-lg"></i>Detalle Cliente</a> 
                     </td>
                     <td><a class="btn btn-primary table-btn" asp-page="./Delete">

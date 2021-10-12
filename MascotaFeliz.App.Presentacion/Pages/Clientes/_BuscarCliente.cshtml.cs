@@ -10,20 +10,21 @@ using MascotaFeliz.App.Persistencia.AppRepositorios;
 
 namespace MascotaFeliz.App.Frontend.Pages
 {
-    public class DetailsModel : PageModel
+    public class _BuscarClienteModel : PageModel
     {
         private readonly IRepositorioCliente repositorioClientes;
+        public IEnumerable<Cliente> Clientes {get;set;}
         public Cliente Cliente { get; set; }
 
-        public DetailsModel(IRepositorioCliente repositorioClientes)
+        public _BuscarClienteModel(IRepositorioCliente repositorioClientes)
         {
             this.repositorioClientes = repositorioClientes;
         }
 
 
-        public IActionResult OnGet(int idCliente)
+        public IActionResult OnGet(int clienteId)
         {
-            Cliente = repositorioClientes.GetClientePorId(idCliente);
+            Cliente = repositorioClientes.GetClientePorId(2);
             if(Cliente==null)
             {
                  return RedirectToPage("./NotFound");
@@ -34,4 +35,3 @@ namespace MascotaFeliz.App.Frontend.Pages
         }
     }
 }
-

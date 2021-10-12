@@ -1,0 +1,42 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages._BuscarClienteModel
+@{
+    ViewData["Title"] = "Cliente Buscado";
+}
+<h1>CLIENTE ENCONTRADO</h1>
+
+<table class="table">
+    
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Dirección</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+                <tr>
+                    <th @Model.Cliente.idPersona></th>
+                    <td>@Model.Cliente.nombres</td>
+                    <td>@Model.Cliente.apellidos</td>
+                    <td>@Model.Cliente.telefono</td>
+                    <td>@Model.Cliente.direccion</td>
+                </tr>      
+            
+        <tr>
+        </tbody>          
+    
+</table>
+
+
+<br><br>
+<div class="row">
+    <div class="col-6" >
+        <a asp-page="../Clientes/List" class="btn btn-success"> Volver</a>
+    </div>
+</div> 
+

@@ -22,11 +22,12 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
             _contexto = contexto;
             clientes = new List<Cliente>()
             {
-                new Cliente{idPersona="00001",nombres="Elkin", apellidos="Restrepo",telefono="3006094015",direccion="Cedritos, Bogotá"},
-                new Cliente{idPersona="00002",nombres="Mayra", apellidos="Ospina",telefono="3008945210",direccion="Villa Colombia, Cali"},
-                new Cliente{idPersona="00003",nombres="Diana", apellidos="Gómez",telefono="3017841308",direccion="Chía, Bogotá"},
-                new Cliente{idPersona="00004",nombres="Dumar", apellidos="Rojas",telefono="3168684393",direccion="NN, Bogotá"},
-                new Cliente{idPersona="00005",nombres="Luis", apellidos="Moncada",telefono="3002596457",direccion="El Caney, Cali"}
+
+                new Cliente{Id=1,idPersona="00001",nombres="Elkin", apellidos="Restrepo",telefono="3006094015",direccion="Cedritos, Bogotá"},
+                new Cliente{Id=2,idPersona="00002",nombres="Mayra", apellidos="Ospina",telefono="3008945210",direccion="Villa Colombia, Cali"},
+                new Cliente{Id=3,idPersona="00003",nombres="Diana", apellidos="Gómez",telefono="3017841308",direccion="Chía, Bogotá"},
+                new Cliente{Id=4,idPersona="00004",nombres="Dumar", apellidos="Rojas",telefono="3168684393",direccion="NN, Bogotá"},
+                new Cliente{Id=5,idPersona="00005",nombres="Luis", apellidos="Moncada",telefono="3002596457",direccion="El Caney, Cali"}
             };
         }
         
@@ -62,9 +63,9 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
         }
 
 
-        Cliente IRepositorioCliente.GetClientePorId(int IdPersona)
+        Cliente IRepositorioCliente.GetClientePorId(int idCliente)
         {
-           return clientes.FirstOrDefault(c => c.Id == IdPersona);   //Busca y retorna un cliente  //ID es la llave primaria de la entidad Persona
+           return clientes.FirstOrDefault(c => c.Id == idCliente);   //Busca y retorna un cliente  //ID es la llave primaria de la entidad Persona
         }
     }
 }

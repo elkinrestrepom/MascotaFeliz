@@ -21,9 +21,9 @@ namespace MascotaFeliz.App.Frontend.Pages
             this.repositorioClientes = repositorioClientes;
         }
         
-        public IActionResult OnGet(int clienteId)
+        public IActionResult OnGet(int idCliente)
         {
-            Cliente = repositorioClientes.GetClientePorId(clienteId);
+            Cliente = repositorioClientes.GetClientePorId(idCliente);
             if(Cliente==null)
             {
                 return RedirectToPage("./NotFound");
