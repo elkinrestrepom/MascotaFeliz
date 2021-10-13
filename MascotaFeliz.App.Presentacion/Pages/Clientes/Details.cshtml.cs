@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia.AppRepositorios;
 
-
 namespace MascotaFeliz.App.Frontend.Pages
 {
     public class DetailsModel : PageModel
@@ -19,7 +18,6 @@ namespace MascotaFeliz.App.Frontend.Pages
         {
             this.repositorioClientes = repositorioClientes;
         }
-
 
         public IActionResult OnGet(int idCliente)
         {

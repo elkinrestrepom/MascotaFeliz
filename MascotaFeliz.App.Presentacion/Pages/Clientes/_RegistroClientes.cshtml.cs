@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,22 +15,53 @@ namespace MascotaFeliz.App.Presentacion.Pages
     public class _RegistroClientesModel : PageModel
     {
         private readonly IRepositorioCliente repositorioClientes;
+        
+        [BindProperty]
         public Cliente Cliente { get; set; }
 
         public _RegistroClientesModel(IRepositorioCliente repositorioClientes)
         {
             this.repositorioClientes = repositorioClientes;
         }
-        public IActionResult OnGet(int saludoId)
+
+        public IActionResult OnGet(int? idCliente)
         {
-            Cliente = repositorioClientes.GetClientePorId(saludoId);
+            if(idCliente.HasValue)
+            {
+                Cliente = repositorioClientes.GetClientePorId(idCliente.Value);
+            }
+            else
+            {
+                Cliente = new Cliente();
+            }
             if(Cliente==null)
             {
-                return RedirectToPage("./NotFound");
+                 return RedirectToPage("./NotFound");
             }
             else
             return Page();
 
+        }
+
+        public IActionResult OnPost()
+        {
+            try
+            {
+               if(Cliente.Id>0)
+                {
+                    Cliente = repositorioClientes.UpdateCliente(Cliente);
+                }
+                else
+                {
+                    repositorioClientes.AddCliente(Cliente);
+                }
+                return Page(); 
+            }
+            catch
+            {
+                return RedirectToPage("../Error");
+            }
+            
         }
     }
 }

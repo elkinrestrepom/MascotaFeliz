@@ -15,7 +15,9 @@ namespace MascotaFeliz.App.Presentacion.Pages
     public class ListModel : PageModel
     {
         private readonly IRepositorioCliente repositorioClientes;
+
         public IEnumerable<Cliente> Clientes {get;set;}
+        
         public ListModel(IRepositorioCliente repositorioClientes)
         {
             this.repositorioClientes = repositorioClientes;

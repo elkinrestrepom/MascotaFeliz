@@ -6,8 +6,10 @@
 <body>
     <div>
         <form class="form-register" method="post">
-            <input type="hidden" asp-for="Cliente.Id"/>
-            <h3>REGISTRAR CLIENTE</h3><br>
+            <input hidden asp-for="Cliente.Id"/>
+            <h3>EDITAR CLIENTE</h3><br>
+            <label asp-for="Cliente.idPersona">Cédula:</label><br>
+            <input asp-for="Cliente.idPersona"type="text" class="controls" name="cedula"  placeholder="Ingrese su cédula" /><br><br>
             <label asp-for="Cliente.nombres">Nombre:</label><br>
             <input asp-for="Cliente.nombres"type="text" class="controls" name="nombre"  placeholder="Ingresa tu nombre" /><br><br>
             <label asp-for="Cliente.apellidos">Apellido:</label><br>
@@ -17,11 +19,17 @@
             <label asp-for="Cliente.telefono">Teléfono:</label><br>
             <input asp-for="Cliente.telefono" type="text" class="controls" name="NumeroTelefono"  placeholder="Ingresa tu teléfono" /><br><br>
 
-            <button class="botons" type="submit">Registrar datos</button>
-            <p><a href="#">¿Ya estas registrado?</a></p>
+            <button class="btn btn-info" type="submit">Actualizar Cliente</button>
+
         </form>
         <br><br>
-           <a asp-page="./List" class="btn-default"> Volver</a>
+        <div class="row">
+            <div class="col-6" >
+                <a asp-page="../Clientes/List" class="btn btn-success"> Volver</a>
+            </div>
+        </div> 
            
     </div>
 </body>
+
+

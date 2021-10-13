@@ -32,21 +32,22 @@
             @foreach(var client in Model.Clientes)
             {
                 <tr>
-                    <th @client.Id></th>
-                    <th @client.idPersona></th>
+                    <th>@client.Id</th>
+                    <th>@client.idPersona</th>
                     <td>@client.nombres</td>
                     <td>@client.apellidos</td>
                     <td>@client.telefono</td>
                     <td>@client.direccion</td>
-                    <td><a class="btn btn-primary table-btn" asp-page="/Clientes/Details" asp-route-idCliente="@client.idPersona">
+                    <td><a class="btn btn-info" asp-page="../Clientes/Details" asp-route-idCliente="@client.idPersona">
                     <i class="fas fa-address-book fa-lg"></i>Detalle Cliente</a> 
                     </td>
-                    <td><a class="btn btn-primary table-btn" asp-page="./Delete">
-                    <i class="fas fa-address-book fa-lg"></i>Eliminar Cliente</a> 
-                    </td>
-                    <td><a class="btn btn-primary table-btn" asp-page="./Edit">
+                    <td><a class="btn btn-info" asp-page="../Clientes/Edit" asp-route-idCliente="@client.idPersona">
                     <i class="fas fa-address-book fa-lg"></i>Editar Cliente</a> 
                     </td>
+                    <td><a class="btn btn-info" asp-page="../Clientes/Delete" asp-route-idCliente="@client.idPersona">
+                    <i class="fas fa-address-book fa-lg"></i>Eliminar Cliente</a> 
+                    </td>
+                    
                 </tr>    
                 
             }

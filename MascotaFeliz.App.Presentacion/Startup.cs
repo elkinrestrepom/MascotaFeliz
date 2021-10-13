@@ -29,7 +29,8 @@ namespace MascotaFeliz.App.Presentacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<IRepositorioCliente>(new RepositorioCliente(new Contexto()));
+            services.AddSingleton<IRepositorioCliente, RepositorioCliente>();
+            //services.AddSingleton<IRepositorioCliente>(new RepositorioCliente(new Contexto()));
             
         }
 

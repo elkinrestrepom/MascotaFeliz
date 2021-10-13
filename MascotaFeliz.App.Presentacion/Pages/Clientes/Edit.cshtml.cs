@@ -1,3 +1,5 @@
+using System.Net.WebSockets;
+using System.Diagnostics.SymbolStore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,31 +14,32 @@ namespace MascotaFeliz.App.Frontend.Pages
     public class EditModel : PageModel
     {
         private readonly IRepositorioCliente repositorioClientes;
-        [BindProperty]
-                 
+
         public Cliente Cliente { get; set; }
 
         public EditModel(IRepositorioCliente repositorioClientes)
         {
             this.repositorioClientes = repositorioClientes;
         }
-        
-        public IActionResult OnGet(int idCliente)
+
+        public IActionResult OnGet(int? idCliente)
         {
-            Cliente = repositorioClientes.GetClientePorId(idCliente);
+            Cliente = repositorioClientes.GetClientePorId(idCliente.Value);
             if(Cliente==null)
             {
-                return RedirectToPage("./NotFound");
+                 return RedirectToPage("./NotFound");
             }
             else
             return Page();
-        }  
 
-        public IActionResult OnPost()
+        }
+
+        public IActionResult OnPost(Cliente clienteEditado)
         {
-            Cliente = repositorioClientes.UpdateCliente(Cliente);
-            return Page();
-        }        
+            repositorioClientes.UpdateCliente(clienteEditado);
+            return RedirectToPage("../Clientes/List");
+        }
+
     }
 }
 

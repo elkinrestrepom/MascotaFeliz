@@ -7,13 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia.AppRepositorios;
 
-
 namespace MascotaFeliz.App.Frontend.Pages
 {
     public class _BuscarClienteModel : PageModel
     {
         private readonly IRepositorioCliente repositorioClientes;
-        public IEnumerable<Cliente> Clientes {get;set;}
+        //public IEnumerable<Cliente> Clientes {get;set;}
         public Cliente Cliente { get; set; }
 
         public _BuscarClienteModel(IRepositorioCliente repositorioClientes)
@@ -22,7 +21,7 @@ namespace MascotaFeliz.App.Frontend.Pages
         }
 
 
-        public IActionResult OnGet(int clienteId)
+        public IActionResult OnGet(int idCliente)
         {
             Cliente = repositorioClientes.GetClientePorId(2);
             if(Cliente==null)

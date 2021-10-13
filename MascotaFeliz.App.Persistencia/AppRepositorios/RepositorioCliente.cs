@@ -1,3 +1,8 @@
+using System.Runtime.InteropServices;
+using System.Net.Http;
+using System.Net.Security;
+using System.IO.Pipes;
+using System.Net.WebSockets;
 using System.Collections;
 using System;
 using System.Collections.Generic;
@@ -9,7 +14,7 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
 {
     public class RepositorioCliente:IRepositorioCliente
     { 
-        private readonly Contexto _contexto;
+        //private readonly Contexto _contexto;
 
        /* public RepositorioCliente(Contexto _contexto)
         {
@@ -17,9 +22,9 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
         }*/
         List<Cliente> clientes;
        
-        public RepositorioCliente(Contexto contexto)
+        public RepositorioCliente()//Contexto contexto)
         {
-            _contexto = contexto;
+            //_contexto = contexto;
             clientes = new List<Cliente>()
             {
 
@@ -37,35 +42,52 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
             return clientes;
         }
 
-
-        public Cliente AddCliente(Cliente cliente)
-        {
-            Cliente clienteAgregado = _contexto.Add(cliente).Entity;
-            _contexto.SaveChanges();
-            return clienteAgregado;
-        }
-
-
-        Cliente IRepositorioCliente.UpdateCliente(Cliente cliente)
-        {
-           Cliente clienteEditar = _contexto.Clientes.FirstOrDefault(c => c.Id == cliente.Id);   //Id es la llave primaria de la entidad Persona
-           if (clienteEditar != null)
-           {
-               clienteEditar.idPersona = cliente.idPersona;  
-               clienteEditar.nombres = cliente.nombres;             
-               clienteEditar.apellidos = cliente.apellidos;
-               clienteEditar.telefono = cliente.telefono;
-               clienteEditar.direccion = cliente.direccion;
-              
-               _contexto.SaveChanges();
-           }
-           return clienteEditar;
-        }
-
-
         Cliente IRepositorioCliente.GetClientePorId(int idCliente)
         {
            return clientes.FirstOrDefault(c => c.Id == idCliente);   //Busca y retorna un cliente  //ID es la llave primaria de la entidad Persona
         }
+
+
+        public Cliente AddCliente(Cliente newCliente)
+        {
+            newCliente.Id = clientes.Max(r => r.Id) +1;
+            clientes.Add(newCliente);
+            return newCliente; 
+            /*Cliente clienteAgregado = _contexto.Add(cliente).Entity;
+            _contexto.SaveChanges();
+            return clienteAgregado;*/
+        }
+
+
+        public Cliente UpdateCliente(Cliente updateCliente)
+        {
+            var cliente = clientes.SingleOrDefault(c=> c.Id == updateCliente.Id);
+           //Cliente clienteEditar = Cliente.FirstOrDefault(c => c.Id == Updatecliente.Id);   //Id es la llave primaria de la entidad Persona
+           if (cliente != null)
+           {
+               cliente.idPersona = updateCliente.idPersona;  
+               cliente.nombres = updateCliente.nombres;             
+               cliente.apellidos = updateCliente.apellidos;
+               cliente.telefono = updateCliente.telefono;
+               cliente.direccion = updateCliente.direccion;
+              
+           }
+           return cliente;
+        }
+
+
+        public void DeleteCliente(int id)
+        {
+            var clienteEncontrado = clientes.FirstOrDefault(c => c.Id == id);
+            if(clienteEncontrado != null)
+            {
+               clientes.Remove(clienteEncontrado);  
+            }
+            
+        }
+
+
+
+
     }
 }
